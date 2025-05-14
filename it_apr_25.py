@@ -419,7 +419,6 @@ html.Div(
     ]
 ),
 
-
 html.Div(
     className='row1',
     children=[
