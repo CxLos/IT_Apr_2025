@@ -63,6 +63,7 @@ df = data.copy()
 
 # Trim leading and trailing whitespaces from column names
 df.columns = df.columns.str.strip()
+df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
 
 # Filtered df where 'Date of Activity:' is in March
 df["Date of Activity"] = pd.to_datetime(df["Date of Activity"])
